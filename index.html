@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MAPA Projects — Project Management | Client-Side PM & Owner's Representative, North Wales</title>
+<meta name="description" content="MAPA Projects — independent client-side project management and owner's representation for high-end residential and construction across North Wales, Chester and the North West. 20+ years' delivery experience." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#191C22;
+    --ink-soft:#2A2E36;
+    --paper:#F5F3EE;
+    --paper-2:#EFECE4;
+    --muted:#6B7079;
+    --line:#E2DDD3;
+    --accent:#B26B3F;
+    --accent-d:#9A5B33;
+    --white:#FFFFFF;
+    --maxw:1140px;
+    --r:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,.display{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.08;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .accent{color:var(--accent)}
+  .eyebrow{font-family:'Space Grotesk',sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(245,243,238,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .mark{width:38px;height:38px;flex:none}
+  .logo .lt1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.22rem;letter-spacing:.01em;line-height:1}
+  .logo .lt1 span{font-weight:400;color:var(--muted)}
+  .logo .lt2{font-family:'Space Grotesk',sans-serif;font-size:.56rem;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-top:3px}
+  .navlinks{display:flex;align-items:center;gap:30px}
+  .navlinks a{font-size:.92rem;color:var(--ink-soft);font-weight:500;transition:color .2s}
+  .navlinks a:hover{color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);padding:11px 20px;border-radius:100px;font-weight:600;font-size:.9rem;transition:transform .2s,background .2s;border:1px solid var(--ink)}
+  .btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+  .menu-toggle{display:none;background:none;border:0;cursor:pointer;width:42px;height:42px}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px auto;transition:.3s}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;background:var(--ink);color:var(--paper);padding:96px 0 104px}
+  .hero .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(circle at 70% 30%,#000 0%,transparent 75%)}
+  .hero .glow{position:absolute;width:620px;height:620px;right:-160px;top:-180px;background:radial-gradient(circle,rgba(178,107,63,.42),transparent 62%);filter:blur(10px)}
+  .hero-inner{position:relative;z-index:2;max-width:820px}
+  .hero h1{font-size:clamp(2.4rem,5.4vw,4.15rem);font-weight:700;margin:20px 0 0}
+  .hero h1 .lite{color:#C7C2B8;font-weight:400}
+  .hero p.lead{font-size:clamp(1.05rem,1.6vw,1.28rem);color:#D9D4C9;margin:24px 0 0;max-width:640px}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+  .hero .btn.ghost{color:var(--paper);border-color:rgba(245,243,238,.35)}
+  .hero .btn.ghost:hover{background:var(--paper);color:var(--ink)}
+
+  /* ---------- TRUST STRIP ---------- */
+  .strip{background:var(--ink-soft);color:#CFCABF;border-top:1px solid rgba(255,255,255,.08)}
+  .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 34px;justify-content:center;padding:18px 24px;font-family:'Space Grotesk',sans-serif;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase}
+  .strip b{color:var(--paper);font-weight:600}
+
+  /* ---------- SECTION ---------- */
+  section{padding:90px 0}
+  .sec-head{max-width:680px;margin-bottom:50px}
+  .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:700;margin-top:12px}
+  .sec-head p{color:var(--muted);font-size:1.08rem;margin-top:16px}
+
+  /* audience cards */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:38px 34px;transition:transform .25s,box-shadow .25s}
+  .card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(25,28,34,.4)}
+  .card .tag{font-family:'Space Grotesk',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+  .card h3{font-size:1.45rem;margin:14px 0 14px}
+  .card p{color:var(--muted)}
+  .card ul{list-style:none;margin-top:18px}
+  .card li{position:relative;padding-left:24px;margin:10px 0;color:var(--ink-soft);font-size:.97rem}
+  .card li::before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;background:var(--accent);border-radius:2px}
+
+  /* services grid */
+  .svcs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .svc{background:var(--paper);padding:34px 30px}
+  .svc .n{font-family:'Space Grotesk',sans-serif;font-size:.85rem;color:var(--accent);font-weight:600}
+  .svc h3{font-size:1.18rem;margin:12px 0 10px}
+  .svc p{color:var(--muted);font-size:.95rem}
+
+  /* about / experience */
+  .about{background:var(--ink);color:var(--paper)}
+  .about .sec-head h2{color:var(--paper)}
+  .about .sec-head p{color:#C7C2B8}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:start}
+  .bio p{color:#D6D1C6;margin-bottom:18px;font-size:1.05rem}
+  .bio .pull{font-family:'Space Grotesk',sans-serif;font-size:1.45rem;line-height:1.3;color:var(--paper);border-left:3px solid var(--accent);padding-left:22px;margin:26px 0;font-weight:500;letter-spacing:-.01em}
+  .timeline{border-left:1px solid rgba(255,255,255,.16);padding-left:26px}
+  .tl{margin-bottom:26px;position:relative}
+  .tl::before{content:"";position:absolute;left:-31px;top:6px;width:10px;height:10px;background:var(--accent);border-radius:50%}
+  .tl .yr{font-family:'Space Grotesk',sans-serif;font-size:.8rem;letter-spacing:.1em;color:#A39E94;text-transform:uppercase}
+  .tl h4{font-size:1.08rem;margin:4px 0 4px;color:var(--paper)}
+  .tl span{color:#B8B3A8;font-size:.93rem}
+
+  /* approach */
+  .principles{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .pr .num{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:700;color:var(--accent);line-height:1}
+  .pr h3{font-size:1.12rem;margin:14px 0 8px}
+  .pr p{color:var(--muted);font-size:.95rem}
+
+  /* credentials */
+  .creds{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
+  .chip{background:var(--white);border:1px solid var(--line);border-radius:100px;padding:11px 20px;font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:.92rem}
+  .chip b{color:var(--accent)}
+
+  /* contact */
+  .contact{background:var(--paper-2)}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+  .contact h2{font-size:clamp(2rem,3.6vw,2.9rem);font-weight:700}
+  .contact p.lead{color:var(--muted);font-size:1.1rem;margin:18px 0 28px}
+  .contact-methods a{display:flex;align-items:center;gap:16px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px;margin-bottom:14px;transition:border-color .2s,transform .2s}
+  .contact-methods a:hover{border-color:var(--accent);transform:translateX(4px)}
+  .contact-methods .ic{width:42px;height:42px;flex:none;background:var(--ink);color:var(--paper);border-radius:10px;display:grid;place-items:center;font-family:'Space Grotesk',sans-serif;font-weight:700}
+  .contact-methods .lbl{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .contact-methods .val{font-weight:600;font-size:1.05rem}
+
+  /* footer */
+  footer{background:var(--ink);color:#A39E94;padding:46px 0 40px}
+  .foot-inner{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+  .foot-inner .logo .lt1{color:var(--paper)}
+  footer small{font-size:.85rem}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:880px){
+    .navlinks{position:fixed;inset:74px 0 auto 0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s ease}
+    .navlinks.open{max-height:420px}
+    .navlinks a{padding:16px 24px;width:100%;border-top:1px solid var(--line)}
+    .navlinks .btn{margin:16px 24px}
+    .menu-toggle{display:block}
+    .two,.svcs,.about-grid,.principles,.contact-grid{grid-template-columns:1fr}
+    .principles{gap:30px}
+    section{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo" aria-label="MAPA Projects home">
+      <svg class="mark" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="76" height="76" rx="12" fill="none" stroke="#191C22" stroke-width="4"/>
+        <line x1="40" y1="8" x2="40" y2="72" stroke="#191C22" stroke-width="3"/>
+        <line x1="8" y1="40" x2="72" y2="40" stroke="#191C22" stroke-width="3"/>
+        <rect x="44" y="8" width="28" height="28" rx="4" fill="#B26B3F"/>
+      </svg>
+      <span>
+        <span class="lt1">MAPA <span>Projects</span></span>
+        <span class="lt2">Project Management</span>
+      </span>
+    </a>
+    <nav class="navlinks" id="nav">
+      <a href="#services">What I do</a>
+      <a href="#audience">Who I help</a>
+      <a href="#about">Experience</a>
+      <a href="#approach">Approach</a>
+      <a class="btn" href="#contact">Start a conversation</a>
+    </nav>
+    <button class="menu-toggle" id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="grid-bg"></div>
+  <div class="glow"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Client-side project management &amp; owner's representation</span>
+    <h1>Your project, delivered.<br><span class="lite">Your design and budget, protected.</span></h1>
+    <p class="lead">Independent project management for high-end residential and construction across North Wales, Chester and the North West — led by a principal contractor with 20+ years on site.</p>
+    <div class="cta">
+      <a class="btn" href="#contact">Start a conversation</a>
+      <a class="btn ghost" href="tel:+447714198743">Call 07714 198743</a>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span><b>20+</b> years' delivery</span>
+    <span><b>SMSTS</b></span>
+    <span><b>CSCS</b> carded</span>
+    <span><b>PRINCE2</b> Practitioner</span>
+    <span><b>ILM</b> Level 7</span>
+    <span><b>Chartered Manager</b> (in progress)</span>
+  </div>
+</div>
+
+<!-- ============ AUDIENCE ============ -->
+<section id="audience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Who I help</span>
+      <h2>Two sides of the table, one safe pair of hands.</h2>
+      <p>Whether you're designing a home or building one, I take the delivery risk off your plate.</p>
+    </div>
+    <div class="two">
+      <div class="card reveal">
+        <span class="tag">For architects &amp; designers</span>
+        <h3>Protect your design on site.</h3>
+        <p>When a private client needs someone to manage their build, I'm the name you can recommend with confidence — an owner's representative who safeguards your design intent and handles the day-to-day, so the project lands well and the practice looks good.</p>
+        <ul>
+          <li>Client-side oversight from drawings to handover</li>
+          <li>Contractor procurement and accountability</li>
+          <li>I field the client's questions — not you</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <span class="tag">For developers &amp; builders</span>
+        <h3>Delivery management, without the overhead.</h3>
+        <p>Growing your pipeline but not ready for another permanent hire? I run a project — or a portfolio — from inception to completion, on a day-rate or permanent basis, whichever suits how you resource your schemes.</p>
+        <ul>
+          <li>Programme, cost and commercial control</li>
+          <li>Site teams led; health, safety &amp; quality driven</li>
+          <li>Flexible: contract / day-rate or permanent</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What I do</span>
+      <h2>End-to-end project delivery.</h2>
+      <p>The full lifecycle, managed on your behalf — from first conversation to a clean handover.</p>
+    </div>
+    <div class="svcs">
+      <div class="svc reveal"><div class="n">01</div><h3>Client-side PM &amp; owner's rep</h3><p>Representing your interests on site, holding the build to the brief, the budget and the programme.</p></div>
+      <div class="svc reveal"><div class="n">02</div><h3>Procurement &amp; contractor management</h3><p>Sourcing, appointing and managing contractors and trades — and keeping them accountable.</p></div>
+      <div class="svc reveal"><div class="n">03</div><h3>Programme &amp; cost control</h3><p>Realistic programmes, milestone tracking, valuations and disciplined change control.</p></div>
+      <div class="svc reveal"><div class="n">04</div><h3>Health, safety &amp; quality</h3><p>SMSTS-led HSEQ performance and quality standards held across every stage of delivery.</p></div>
+      <div class="svc reveal"><div class="n">05</div><h3>Client &amp; stakeholder management</h3><p>Clear reporting and calm communication that keeps clients and stakeholders confident.</p></div>
+      <div class="svc reveal"><div class="n">06</div><h3>Risk &amp; governance</h3><p>PRINCE2-aligned governance — spotting risk early and protecting the outcome.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>Two decades on the tools, the trades and the P&amp;L.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="bio reveal">
+        <p>I'm Mark Parker, founder of MAPA Projects. For over twenty years I've delivered construction and high-end residential projects across North Wales and the North West — most recently as founder and principal contractor of my own contracting business, owning everything from procurement and multi-trade delivery to client relationships and the full P&amp;L.</p>
+        <div class="pull">"I've sat on the contractor's side for two decades — so I know exactly where projects slip, and how to keep them honest, calm and on track."</div>
+        <p>That perspective is what I now bring client-side: the same delivery discipline, working for you rather than the contractor. Today I help architects, private clients and developers get the building they were promised — on programme, on budget and to the standard the design deserves.</p>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl"><div class="yr">2018 – 2026</div><h4>Founder &amp; Managing Director</h4><span>Principal contractor — high-net-worth residential. Full P&amp;L, procurement, multi-trade delivery.</span></div>
+        <div class="tl"><div class="yr">2013 – 2018</div><h4>Independent Project Manager</h4><span>Client-side PM consultant across the North West &amp; North Wales. A practice built on referral and repeat business.</span></div>
+        <div class="tl"><div class="yr">2004 – 2013</div><h4>Area Manager</h4><span>Operations &amp; portfolio management across a regional estate. Five promotions.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPROACH ============ -->
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How I work</span>
+      <h2>Steady, straight, and on your side.</h2>
+    </div>
+    <div class="principles">
+      <div class="pr reveal"><div class="num">01</div><h3>On your side</h3><p>I represent your interests — never the contractor's. One clear point of accountability.</p></div>
+      <div class="pr reveal"><div class="num">02</div><h3>No surprises</h3><p>Honest reporting on cost, programme and risk. You always know where the project really stands.</p></div>
+      <div class="pr reveal"><div class="num">03</div><h3>Calm under pressure</h3><p>Problems get solved, not dramatised. Twenty years of knowing what actually matters.</p></div>
+      <div class="pr reveal"><div class="num">04</div><h3>Design respected</h3><p>The finished building should match the intent. I protect quality through to handover.</p></div>
+    </div>
+    <div class="creds reveal" style="margin-top:44px">
+      <span class="chip"><b>SMSTS</b> &nbsp;Site Management Safety</span>
+      <span class="chip"><b>CSCS</b> &nbsp;Card</span>
+      <span class="chip"><b>PRINCE2</b> &nbsp;Practitioner &amp; Agile</span>
+      <span class="chip"><b>ILM</b> &nbsp;Level 7 Diploma</span>
+      <span class="chip"><b>Chartered Manager</b> &nbsp;CMI (in progress)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Start a conversation</span>
+        <h2>Let's talk about your project.</h2>
+        <p class="lead">A short call or a coffee — no obligation. Tell me what you're building, and I'll tell you straight how I can help.</p>
+        <p style="color:var(--muted)">Based in North Wales · Serving North Wales, Chester &amp; the North West</p>
+      </div>
+      <div class="contact-methods reveal">
+        <a href="tel:+447714198743">
+          <span class="ic">T</span>
+          <span><span class="lbl">Telephone</span><br><span class="val">07714 198743</span></span>
+        </a>
+        <a href="mailto:markparker05@gmail.com?subject=Project%20enquiry%20%E2%80%94%20MAPA%20Projects">
+          <span class="ic">@</span>
+          <span><span class="lbl">Email</span><br><span class="val">markparker05@gmail.com</span></span>
+        </a>
+        <a href="https://www.linkedin.com/in/mark-parker-07a885316" target="_blank" rel="noopener">
+          <span class="ic">in</span>
+          <span><span class="lbl">LinkedIn</span><br><span class="val">Connect with Mark</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot-inner">
+    <div class="logo">
+      <svg class="mark" viewBox="0 0 80 80" width="34" height="34" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="2" y="2" width="76" height="76" rx="12" fill="none" stroke="#F5F3EE" stroke-width="4"/>
+        <line x1="40" y1="8" x2="40" y2="72" stroke="#F5F3EE" stroke-width="3"/>
+        <line x1="8" y1="40" x2="72" y2="40" stroke="#F5F3EE" stroke-width="3"/>
+        <rect x="44" y="8" width="28" height="28" rx="4" fill="#B26B3F"/>
+      </svg>
+      <span><span class="lt1">MAPA <span style="color:#A39E94">Projects</span></span><span class="lt2">Project Management</span></span>
+    </div>
+    <small>© <span id="yr"></span> MAPA Projects · Project Management · North Wales</small>
+  </div>
+</footer>
+
+<script>
+  // mobile nav
+  var t=document.getElementById('toggle'),n=document.getElementById('nav');
+  t.addEventListener('click',function(){n.classList.toggle('open')});
+  n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open')})});
+  // year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
