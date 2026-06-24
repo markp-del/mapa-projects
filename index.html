@@ -224,6 +224,13 @@
     .two,.svcs,.about-grid,.principles,.contact-grid,.projects,.quotes,.gallery,.ba{grid-template-columns:1fr}
     .principles{gap:30px}
     section{padding:64px 0}
+    /* mobile hero: show the full photo (no zoom/crop), headline beneath */
+    .hero{display:block;min-height:0;padding:0}
+    .hero .bg{position:relative;inset:auto;width:100%;aspect-ratio:4/3;transform:none;animation:none}
+    .hero .scrim,.hero .warm,.hero .credit{display:none}
+    .hero-inner{max-width:none;padding-top:30px;padding-bottom:40px;text-shadow:none}
+    .hero h1{font-size:2.1rem}
+    .hero p.lead{margin-top:16px}
   }
 </style>
 </head>
