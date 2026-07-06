@@ -55,15 +55,16 @@
         var el = form.querySelector('[name="' + n + '"]');
         return el ? el.value.trim() : "";
       };
-      var subject = "Register interest — " + (v("course") || "Clwydian Academy");
+      var cy = (document.documentElement.lang || "").indexOf("cy") === 0;
+      var subject = (cy ? "Cofrestru diddordeb — " : "Register interest — ") + (v("course") || "Clwydian Academy");
       var body = [
-        "Name: " + v("name"),
-        "Email: " + v("email"),
-        "Phone: " + v("phone"),
-        "Course of interest: " + v("course"),
-        "Live in Wales: " + v("wales"),
+        (cy ? "Enw: " : "Name: ") + v("name"),
+        (cy ? "E-bost: " : "Email: ") + v("email"),
+        (cy ? "Ffôn: " : "Phone: ") + v("phone"),
+        (cy ? "Cwrs o ddiddordeb: " : "Course of interest: ") + v("course"),
+        (cy ? "Byw yng Nghymru: " : "Live in Wales: ") + v("wales"),
         "",
-        "Message:",
+        (cy ? "Neges:" : "Message:"),
         v("message"),
       ].join("\n");
       window.location.href =

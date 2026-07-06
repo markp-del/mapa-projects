@@ -18,9 +18,16 @@ No frameworks, no build tools, no database — every page is a plain HTML file y
 | `funders/` | Business plan page for grant assessors & lenders |
 | `contact/` | Contact + register-interest form |
 | `privacy/`, `404.html` | Privacy policy and not-found page |
+| `cy/` | The complete Welsh-language site (mirrors every English page) |
 | `assets/` | CSS, JavaScript, images, and the business plan PDF |
-| `sitemap.xml`, `robots.txt` | Search engine files (already configured) |
+| `sitemap.xml`, `robots.txt` | Search engine files (already configured, bilingual) |
 | `CNAME` | Tells GitHub Pages your custom domain |
+
+### The Welsh version
+
+Every page has a Welsh twin under `/cy/` (e.g. `/courses/` ↔ `/cy/cyrsiau/`), linked by the **Cymraeg / English** toggle in the header. Behind the scenes, hreflang tags and the sitemap tell Google which page to show Welsh-language searchers — searches like "cyrsiau trin gwallt" have almost no competition.
+
+**Before launch:** have a fluent Welsh speaker read the `/cy/` pages. The translation is written to a high standard, but a native proofread (a "prawfddarllen") is cheap and Welsh Government assessors will notice the difference. To fix any wording, edit the matching `index.html` inside `cy/` — the text is plain HTML.
 
 ---
 
