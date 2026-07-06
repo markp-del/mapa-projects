@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Clwydian Academy seal — the Clwydian ridgeline read as a sweep of hair">
+  <defs>
+    <clipPath id="sealclip"><circle cx="120" cy="120" r="110"/></clipPath>
+  </defs>
+  <circle cx="120" cy="120" r="112" fill="#574463"/>
+  <g clip-path="url(#sealclip)" fill="none" stroke-linecap="round">
+    <path d="M0,96 C58,58 122,118 240,66"  stroke="#f7f5f2" stroke-width="7"/>
+    <path d="M0,114 C62,80 128,134 240,86" stroke="#f7f5f2" stroke-width="4.5" opacity=".72"/>
+    <path d="M0,138 C66,102 134,156 240,108" stroke="#c2a14d" stroke-width="6"/>
+    <path d="M0,160 C72,128 142,172 240,132" stroke="#f7f5f2" stroke-width="5" opacity=".88"/>
+    <path d="M0,180 C80,154 150,188 240,155" stroke="#f7f5f2" stroke-width="3.5" opacity=".55"/>
+  </g>
+</svg>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mapaprojects.co.uk/sitemap.xml
+Sitemap: https://clwydianacademy.co.uk/sitemap.xml
