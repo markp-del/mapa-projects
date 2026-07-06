@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
-  <defs><clipPath id="c"><circle cx="120" cy="120" r="110"/></clipPath></defs>
-  <circle cx="120" cy="120" r="116" fill="#574463"/>
-  <g clip-path="url(#c)" fill="none" stroke-linecap="round">
-    <path d="M0,100 C58,60 122,122 240,70" stroke="#f7f5f2" stroke-width="13"/>
-    <path d="M0,138 C66,102 134,156 240,108" stroke="#c2a14d" stroke-width="12"/>
-    <path d="M0,174 C78,146 148,184 240,148" stroke="#f7f5f2" stroke-width="11" opacity=".92"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Clwydian Academy">
+  <defs><clipPath id="sc"><circle cx="120" cy="120" r="108"/></clipPath></defs>
+  <circle cx="120" cy="120" r="114" fill="#574463"/>
+  <g clip-path="url(#sc)" fill="none" stroke-linecap="round">
+    <path d="M4,112 C56,52 92,44 128,76 C160,104 192,96 236,108" stroke="#f7f5f2" stroke-width="11.5"/>
+    <path d="M4,136 C56,80 92,72 128,104 C160,132 192,124 236,132" stroke="#c2a14d" stroke-width="11.5"/>
+    <path d="M4,160 C56,108 92,100 128,132 C160,160 192,152 236,160" stroke="#f7f5f2" stroke-width="11.5"/>
+    <path d="M4,184 C56,140 92,132 128,160 C160,188 192,180 236,184" stroke="#f7f5f2" stroke-width="11.5"/>
   </g>
 </svg>
