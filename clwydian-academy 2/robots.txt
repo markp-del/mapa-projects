@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clwydianacademy.co.uk/sitemap.xml
