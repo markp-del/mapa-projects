@@ -65,15 +65,14 @@
 </header>
 <main id="main">
 <!-- ============ HERO ============ -->
-<section class="hero hero--dark">
-  <div class="hero-bg"></div>
-  <svg class="hero-ridge" viewBox="0 0 900 300" aria-hidden="true" fill="none" stroke-linecap="round">
-    <path d="M-20,190 C210,60 460,250 920,90" stroke="#9d87b0" stroke-width="2.5"/>
-    <path d="M-20,235 C230,120 480,290 920,140" stroke="#c2a14d" stroke-width="2"/>
-    <path d="M-20,275 C250,170 500,320 920,190" stroke="#9d87b0" stroke-width="1.5"/>
-  </svg>
-  <div class="wrap hero-grid">
-    <div>
+<section class="hero hero--dark hero--photo">
+  <picture>
+    <source media="(max-width: 700px)" srcset="/assets/img/hero-training-mobile.jpg">
+    <img class="hero-photo" src="/assets/img/hero-training.jpg" alt="Myfyrwyr Clwydian Academy yn torri, lliwio a gorffen i fodelau byw ar y llawr hyfforddi" fetchpriority="high">
+  </picture>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-content">
       <p class="eyebrow reveal">Llanelwy &middot; Gogledd Cymru &middot; Sefydlwyd 2026</p>
       <h1 class="reveal" style="--d:.08s">Trinwyr gwallt cymwysedig mewn chwe mis, <em>nid dwy flynedd.</em></h1>
       <p class="lede reveal" style="--d:.16s">Academi alwedigaethol garlam i oedolion yw Clwydian Academy. Mae hyfforddiant dwys gyda modelau byw yn Llanelwy yn mynd &acirc; chi o ddechreuwr i gymhwyster NVQ safon VTCT — gyda&rsquo;r sgiliau busnes i ennill ohono o&rsquo;r diwrnod cyntaf.</p>
@@ -82,18 +81,6 @@
         <a class="btn btn-ghost-light" href="/cy/ffioedd-a-chyllid/">Gwirio eich cyllid</a>
       </div>
       <p class="hero-note reveal" style="--d:.32s"><span class="dot"></span> Llwybrau wedi&rsquo;u hariannu&rsquo;n llawn i ddysgwyr a phrentisiaid — mae prentisiaethau&rsquo;n greiddiol i&rsquo;r model</p>
-    </div>
-    <div class="hero-art reveal" style="--d:.2s">
-      <div class="seal-wrap">
-        <div class="orbit" aria-hidden="true"></div>
-        <img class="seal-main" src="/assets/img/seal-512.png" alt="S&ecirc;l Clwydian Academy — crib Bryniau Clwyd wedi&rsquo;i darlunio fel llif o wallt" width="512" height="512">
-      </div>
-      <div class="art-caption">
-        <svg viewBox="0 0 64 14" aria-hidden="true" fill="none" stroke-linecap="round">
-          <path d="M2,10 C16,2 28,13 44,6 C52,3 58,6 62,4" stroke="#c2a14d" stroke-width="2.2"/>
-        </svg>
-        <p><em>Y grib a&rsquo;r cudyn</em> — un llinell, dau ystyr.</p>
-      </div>
     </div>
   </div>
 </section>
